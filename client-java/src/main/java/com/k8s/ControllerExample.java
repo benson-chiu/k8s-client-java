@@ -188,7 +188,6 @@ public class ControllerExample {
         EventBroadcaster eventBroadcaster = new LegacyEventBroadcaster(coreV1Api);
         DefaultRateLimitingQueue<Request> workqueue = new DefaultRateLimitingQueue<>();
 
-        // Controller reconciler prints node information on events
         ControllerReconciler controllerReconciler = new ControllerReconciler(
             coreV1Api, customObjectsApi, workqueue,
             podInformer, atInformer, eventBroadcaster.newRecorder(
@@ -385,14 +384,14 @@ public class ControllerExample {
             if (!original.equals(instance)) {
                 try {
                     customObjectsApi.replaceNamespacedCustomObject(
-                            "cnat.programming-kubernetes.info",
-                            "v1alpha1",
-                            instance.getMetadata().getNamespace(),
-                            "ats",
-                            instance.getMetadata().getName(),
-                            instance,
-                            null,
-                            null
+                        "cnat.programming-kubernetes.info",
+                        "v1alpha1",
+                        instance.getMetadata().getNamespace(),
+                        "ats",
+                        instance.getMetadata().getName(),
+                        instance,
+                        null,
+                        null
                     );
                 } catch (ApiException e) {
                     System.out.println(e.getMessage());
