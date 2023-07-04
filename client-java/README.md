@@ -110,12 +110,9 @@ reconcile裡拿到at這個CR之後會將裡面的phase狀態初始化為”PENDI
 `mvn exec:java -D exec.mainClass=com.k8s.ControllerExample -D exec.cleanupDaemonThreads=false` <br>
 
 ![][run-controller]
-可從Kubesphere中看到CRD、CR以及關聯的Pod以建立完成。
-![][kubesphere-crd-cr]
-![][kubesphere-pod]
 
-Source code reference<br>
-https://github.com/benson-chiu/k8s-client-java/tree/master/client-java
+可透過kubectl中看到CRD、CR以及關聯的Pod以建立完成。<br>
+![][kubectl]
 
 
 [api]: https://raw.githubusercontent.com/benson-chiu/k8s-client-java/master/client-java/images/api.jpg
@@ -140,9 +137,7 @@ https://github.com/benson-chiu/k8s-client-java/tree/master/client-java
 
 [github-action]: https://raw.githubusercontent.com/benson-chiu/k8s-client-java/master/client-java/images/github-action.jpg
 
-[kubesphere-crd-cr]: https://raw.githubusercontent.com/benson-chiu/k8s-client-java/master/client-java/images/kubesphere-crd-cr.jpg
-
-[kubesphere-pod]: https://raw.githubusercontent.com/benson-chiu/k8s-client-java/master/client-java/images/kubesphere-pod.jpg
+[kubectl]: https://raw.githubusercontent.com/benson-chiu/k8s-client-java/master/client-java/images/kubectl.jpg
 
 [pending-state]: https://raw.githubusercontent.com/benson-chiu/k8s-client-java/master/client-java/images/pending-state.jpg
 
